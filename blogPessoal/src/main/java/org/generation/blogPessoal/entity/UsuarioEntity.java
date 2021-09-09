@@ -1,5 +1,4 @@
 package org.generation.blogPessoal.entity;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,6 +27,16 @@ public class UsuarioEntity {
 		@Size(min = 5)
 		private String senha;
 		
+		public UsuarioEntity() {
+			
+		}
+
+		public UsuarioEntity(long id, String nome, String usuario, String senha) {
+			this.id = id;
+			this.nome = nome;
+			this.usuario = usuario;
+			this.senha = senha;
+		}
 
 		public long getId() {
 			return id;
